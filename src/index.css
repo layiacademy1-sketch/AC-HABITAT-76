@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-wood-50: #fdfaf7;
+  --color-wood-100: #f7f0e8;
+  --color-wood-200: #eadbc9;
+  --color-wood-300: #d8bc9f;
+  --color-wood-400: #c19a77;
+  --color-wood-500: #a67c52;
+  --color-wood-600: #8b6341;
+  --color-wood-700: #745136;
+  --color-wood-800: #5f422d;
+  --color-wood-900: #4e3728;
+  --color-wood-950: #3a2a1f;
+}
+
+@layer base {
+  body {
+    @apply bg-wood-50 text-wood-900 font-sans min-h-screen;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .bg-wood-texture {
+    background-image: url("https://images.unsplash.com/photo-1588345921523-c2dcd57dd21f?q=80&w=2070&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .wood-card {
+    @apply bg-white/80 backdrop-blur-md border border-wood-200 shadow-xl rounded-3xl;
+  }
+
+  .wood-gradient {
+    @apply bg-gradient-to-br from-wood-800 to-wood-950;
+  }
+}
