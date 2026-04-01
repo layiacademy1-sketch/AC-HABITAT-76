@@ -113,7 +113,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
-              <div className="w-12 h-12 overflow-hidden">
+              <div className="w-14 h-14 overflow-hidden">
                 <img 
                   src="https://image.noelshack.com/fichiers/2026/14/4/1775082023-heri-5.jpg" 
                   alt="Logo AC-Habitat 76" 
@@ -207,7 +207,7 @@ export default function App() {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-10px] opacity-40"
+                  className="absolute inset-[20px] opacity-40"
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full text-wood-500">
                     <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 4" />
@@ -219,7 +219,7 @@ export default function App() {
                 <motion.div
                   animate={{ rotate: -360 }}
                   transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-20px] opacity-20"
+                  className="absolute inset-[15px] opacity-20"
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full text-wood-400">
                     <circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" strokeWidth="0.1" strokeDasharray="5 10" />
@@ -232,14 +232,14 @@ export default function App() {
                   <img 
                     src="https://image.noelshack.com/fichiers/2026/14/4/1775082023-heri-5.jpg" 
                     alt="Logo AC-Habitat 76" 
-                    className="w-64 h-64 md:w-48 md:h-48 object-contain"
+                    className="w-80 h-80 md:w-64 md:h-64 object-contain"
                     referrerPolicy="no-referrer"
                   />
                 </div>
               </motion.div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 shadow-lg mx-auto lg:mx-0">
                 <MapPin className="w-4 h-4 text-wood-300" />
-                Basé en Normandie à Octeville sur Mer
+                Basé en Normandie à Octeville-sur-Mer
               </div>
               <h1 className="text-6xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
                 L'Art du Bois au Service de votre <span className="text-wood-400 italic">Habitat</span>
@@ -544,7 +544,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="text-wood-400 text-sm font-bold uppercase tracking-wider mb-1">Adresse</div>
-                    <div className="text-xl font-bold">7 rue des hautes vallées, 76930 Octeville sur Mer</div>
+                    <div className="text-xl font-bold">7 rue des hautes vallées, 76930 Octeville-sur-Mer</div>
                   </div>
                 </div>
               </div>
@@ -618,7 +618,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 overflow-hidden">
+              <div className="w-12 h-12 overflow-hidden">
                 <img 
                   src="https://image.noelshack.com/fichiers/2026/14/4/1775082023-heri-5.jpg" 
                   alt="Logo AC-Habitat 76" 
