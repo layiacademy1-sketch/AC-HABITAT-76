@@ -112,9 +112,14 @@ export default function App() {
       <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-wood-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
-            <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
-              <div className="bg-wood-700 p-2 rounded">
-                <Hammer className="text-white w-6 h-6" />
+            <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
+              <div className="w-12 h-12 overflow-hidden rounded-lg shadow-sm border border-wood-100 bg-white">
+                <img 
+                  src="https://image.noelshack.com/fichiers/2026/14/3/1775080556-chatgpt-image-1-avr-2026-23-44-57.jpg" 
+                  alt="Logo AC-Habitat 76" 
+                  className="w-full h-full object-contain p-1"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <span className="text-2xl font-serif font-bold tracking-tight text-wood-900">
                 AC-Habitat <span className="text-wood-600">76</span>
@@ -190,18 +195,59 @@ export default function App() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-center lg:text-left flex flex-col items-center lg:items-start"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 shadow-lg">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="mb-12 relative flex justify-center lg:justify-start"
+              >
+                {/* Rotating Wood-like SVG Design */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-[-30px] opacity-40"
+                >
+                  <svg viewBox="0 0 100 100" className="w-full h-full text-wood-500">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 4" />
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="10 5" />
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" strokeWidth="0.2" strokeDasharray="2 2" />
+                  </svg>
+                </motion.div>
+                
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-[-50px] opacity-20"
+                >
+                  <svg viewBox="0 0 100 100" className="w-full h-full text-wood-400">
+                    <circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" strokeWidth="0.1" strokeDasharray="5 10" />
+                    <path d="M50 2 A48 48 0 0 1 98 50" fill="none" stroke="currentColor" strokeWidth="0.5" />
+                    <path d="M50 98 A48 48 0 0 1 2 50" fill="none" stroke="currentColor" strokeWidth="0.5" />
+                  </svg>
+                </motion.div>
+                
+                <div className="relative z-10 p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
+                  <img 
+                    src="https://image.noelshack.com/fichiers/2026/14/3/1775080556-chatgpt-image-1-avr-2026-23-44-57.jpg" 
+                    alt="Logo AC-Habitat 76" 
+                    className="w-64 h-64 md:w-48 md:h-48 object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </motion.div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 shadow-lg mx-auto lg:mx-0">
                 <MapPin className="w-4 h-4 text-wood-300" />
                 Basé en Normandie à Octeville sur Mer
               </div>
               <h1 className="text-6xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
                 L'Art du Bois au Service de votre <span className="text-wood-400 italic">Habitat</span>
               </h1>
-              <p className="text-xl text-wood-100 mb-12 max-w-lg leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              <p className="text-xl text-wood-100 mb-12 max-w-lg leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] mx-auto lg:mx-0">
                 Spécialiste en charpente, couverture et aménagements bois. Nous intervenons sur toute la Normandie pour vos projets de construction et rénovation.
               </p>
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
                 <a 
                   href="https://wa.me/33763990789?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20vos%20services."
                   target="_blank"
@@ -488,7 +534,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="text-wood-400 text-sm font-bold uppercase tracking-wider mb-1">Email</div>
-                    <a href="mailto:achabitat76@gmail.com" className="text-2xl font-bold hover:text-wood-400 transition-colors">achabitat76@gmail.com</a>
+                    <a href="mailto:achabitat76@gmail.com" className="text-lg font-bold hover:text-wood-400 transition-colors">achabitat76@gmail.com</a>
                   </div>
                 </div>
 
@@ -571,9 +617,14 @@ export default function App() {
       <footer className="py-12 bg-wood-50 border-t border-wood-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center gap-2">
-              <div className="bg-wood-700 p-1.5 rounded">
-                <Hammer className="text-white w-5 h-5" />
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 overflow-hidden rounded-lg shadow-sm border border-wood-100 bg-white">
+                <img 
+                  src="https://image.noelshack.com/fichiers/2026/14/3/1775080556-chatgpt-image-1-avr-2026-23-44-57.jpg" 
+                  alt="Logo AC-Habitat 76" 
+                  className="w-full h-full object-contain p-1"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <span className="text-xl font-serif font-bold tracking-tight text-wood-900">
                 AC-Habitat <span className="text-wood-600">76</span>
@@ -584,10 +635,6 @@ export default function App() {
               © {new Date().getFullYear()} AC-Habitat 76. Tous droits réservés.
             </div>
 
-            <div className="flex gap-6">
-              <a href="#" className="text-wood-400 hover:text-wood-700 transition-colors">Mentions légales</a>
-              <a href="#" className="text-wood-400 hover:text-wood-700 transition-colors">Confidentialité</a>
-            </div>
           </div>
         </div>
       </footer>
