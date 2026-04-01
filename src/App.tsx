@@ -113,11 +113,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
-              <div className="w-12 h-12 overflow-hidden rounded-lg shadow-sm border border-wood-100 bg-white">
+              <div className="w-12 h-12 overflow-hidden">
                 <img 
-                  src="https://image.noelshack.com/fichiers/2026/14/3/1775080556-chatgpt-image-1-avr-2026-23-44-57.jpg" 
+                  src="https://image.noelshack.com/fichiers/2026/14/4/1775082023-heri-5.jpg" 
                   alt="Logo AC-Habitat 76" 
-                  className="w-full h-full object-contain p-1"
+                  className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -207,7 +207,7 @@ export default function App() {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-30px] opacity-40"
+                  className="absolute inset-[-10px] opacity-40"
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full text-wood-500">
                     <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 4" />
@@ -219,7 +219,7 @@ export default function App() {
                 <motion.div
                   animate={{ rotate: -360 }}
                   transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-50px] opacity-20"
+                  className="absolute inset-[-20px] opacity-20"
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full text-wood-400">
                     <circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" strokeWidth="0.1" strokeDasharray="5 10" />
@@ -228,9 +228,9 @@ export default function App() {
                   </svg>
                 </motion.div>
                 
-                <div className="relative z-10 p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
+                <div className="relative z-10">
                   <img 
-                    src="https://image.noelshack.com/fichiers/2026/14/3/1775080556-chatgpt-image-1-avr-2026-23-44-57.jpg" 
+                    src="https://image.noelshack.com/fichiers/2026/14/4/1775082023-heri-5.jpg" 
                     alt="Logo AC-Habitat 76" 
                     className="w-64 h-64 md:w-48 md:h-48 object-contain"
                     referrerPolicy="no-referrer"
@@ -618,11 +618,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 overflow-hidden rounded-lg shadow-sm border border-wood-100 bg-white">
+              <div className="w-10 h-10 overflow-hidden">
                 <img 
-                  src="https://image.noelshack.com/fichiers/2026/14/3/1775080556-chatgpt-image-1-avr-2026-23-44-57.jpg" 
+                  src="https://image.noelshack.com/fichiers/2026/14/4/1775082023-heri-5.jpg" 
                   alt="Logo AC-Habitat 76" 
-                  className="w-full h-full object-contain p-1"
+                  className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
