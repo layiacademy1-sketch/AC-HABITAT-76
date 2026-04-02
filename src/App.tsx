@@ -17,7 +17,8 @@ import {
   Layout, 
   Maximize,
   Menu,
-  X
+  X,
+  Linkedin
 } from "lucide-react";
 import { useState, FormEvent } from "react";
 
@@ -603,10 +604,23 @@ export default function App() {
                 </div>
                 <button 
                   type="submit"
-                  className="w-full bg-wood-700 text-white py-4 rounded-xl font-bold text-lg hover:bg-wood-800 transition-all shadow-lg"
+                  className="w-full bg-wood-700 text-white py-4 rounded-xl font-bold text-lg hover:bg-wood-800 transition-all shadow-lg mb-8"
                 >
                   Envoyer ma demande
                 </button>
+
+                <div className="flex flex-col items-center gap-3 pt-6 border-t border-wood-100">
+                  <span className="text-wood-600 font-bold text-sm uppercase tracking-wider">Nous suivre</span>
+                  <a 
+                    href="https://fr.linkedin.com/in/thibault-desurosne-696899103" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-3 bg-wood-50 rounded-full shadow-sm border border-wood-200 text-wood-700 hover:text-wood-900 hover:scale-110 transition-all"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                </div>
               </form>
             </div>
           </div>
